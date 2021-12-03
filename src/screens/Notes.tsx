@@ -2,21 +2,18 @@ import React from 'react';
 import {View, Image, Text, StyleSheet} from 'react-native';
 import Logo from '../assets/Logo.png';
 
-const Splash: React.FC<any> = () => {
+const Notes: React.FC<any> = () => {
   return (
-    <View style={styles.splash}>
-      <Image source={Logo} style={styles.logo} />
+    <View style={styles.home}>
+      <Text>Note Screen</Text>
     </View>
   );
 };
 const styles = StyleSheet.create({
-  splash: {
+  home: {
     flex: 1,
     alignItems: 'center',
-    backgroundColor: '#fff',
-  },
-  logo: {
-    marginTop: 100,
+    backgroundColor: 'grey',
   },
 });
-export default Splash;
+export default Notes;
