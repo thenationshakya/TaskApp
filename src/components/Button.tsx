@@ -1,7 +1,8 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 
+//dependencies
 import LinearGradient from 'react-native-linear-gradient';
+import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 const Button: React.FC<any> = ({title, onPress}) => {
@@ -29,7 +30,7 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: 'center',
     width: 200,
-    color: 'white',
+    color: '#fff',
     alignItems: 'center',
   },
 });
