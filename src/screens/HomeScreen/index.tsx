@@ -1,9 +1,11 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
+import {View, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
-import Button from '../components/Button';
-import Logo from '../components/Logo';
+import Logo from '../../components/Logo';
+import Button from '../../components/Button';
+
+import styles from './styles';
 
 const HomeScreen: React.FC<any> = ({navigation}) => {
   return (
@@ -22,37 +24,11 @@ const HomeScreen: React.FC<any> = ({navigation}) => {
         />
         <Button
           title="Check List"
-          onPress={() => navigation.navigate('Check List')}
+          onPress={() => navigation.navigate('CheckList')}
         />
       </View>
     </LinearGradient>
   );
 };
-const styles = StyleSheet.create({
-  home: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  container: {
-    maxWidth: 300,
-    paddingHorizontal: 20,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  logo: {
-    marginBottom: 40,
-  },
-  title: {
-    fontFamily: 'Tangerine-Regular',
-    fontSize: 60,
-    color: 'white',
-  },
-  description: {
-    textAlign: 'center',
-    fontSize: 16,
-    marginTop: 5,
-    marginBottom: 10,
-  },
-});
+
 export default HomeScreen;

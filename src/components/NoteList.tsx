@@ -1,8 +1,6 @@
 import React from 'react';
 import {StyleSheet, TouchableOpacity, Text, View, FlatList} from 'react-native';
 import uuid from 'react-native-uuid';
-import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
-
 interface Props {
   id: number;
   note: string;
@@ -35,9 +33,6 @@ const NoteList: React.FC<Props> = () => {
               <TouchableOpacity>
                 <Text>more..</Text>
               </TouchableOpacity>
-              <TouchableOpacity>
-                <FontAwesome5 name={'close'} />
-              </TouchableOpacity>
             </View>
           );
         }}
@@ -45,18 +40,5 @@ const NoteList: React.FC<Props> = () => {
     </>
   );
 };
-const styles = StyleSheet.create({
-  button: {
-    paddingVertical: 15,
-    paddingHorizontal: 20,
-    borderRadius: 50,
-    marginVertical: 10,
-  },
-  btnText: {
-    textAlign: 'center',
-    width: 200,
-    color: 'white',
-    alignItems: 'center',
-  },
-});
+
 export default NoteList;
