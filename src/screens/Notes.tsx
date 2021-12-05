@@ -1,11 +1,25 @@
+import {useNavigation} from '@react-navigation/core';
 import React from 'react';
-import {View, Image, Text, StyleSheet} from 'react-native';
-import Logo from '../assets/Logo.png';
+
+import {View, Text, StyleSheet} from 'react-native';
+
+import BackButton from '../components/BackButton';
+import Counter from '../components/Counter';
+import NoteList from '../components/NoteList';
+import PageTitle from '../components/PageTitle';
 
 const Notes: React.FC<any> = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.home}>
-      <Text>Note Screen</Text>
+      <BackButton title={'Go Back'} />
+      <View>
+        <PageTitle title={'Quick Notes'} />
+        <Counter />
+      </View>
+      <NoteList />
+      {/* <AddIcon /> */}
     </View>
   );
 };
