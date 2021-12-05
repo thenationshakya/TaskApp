@@ -1,11 +1,13 @@
 import React from 'react';
+import styles from './styles';
+
+//dependencies
 import {View, Text} from 'react-native';
 import LinearGradient from 'react-native-linear-gradient';
 
+//components
 import Logo from '../../components/Logo';
 import Button from '../../components/Button';
-
-import styles from './styles';
 
 const HomeScreen: React.FC<any> = ({navigation}) => {
   return (

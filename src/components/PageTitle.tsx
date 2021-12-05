@@ -1,8 +1,10 @@
 import React from 'react';
-import { Text, StyleSheet} from 'react-native';
 
-interface Props{
- title: string;
+//dependencies
+import {Text, StyleSheet} from 'react-native';
+
+interface Props {
+  title: string;
 }
 
 const Notes: React.FC<Props> = ({title}) => {
@@ -10,8 +12,8 @@ const Notes: React.FC<Props> = ({title}) => {
 };
 const styles = StyleSheet.create({
   title: {
-   color: 'white',
-   fontSize: 25,
+    color: 'white',
+    fontSize: 25,
   },
 });
 export default Notes;

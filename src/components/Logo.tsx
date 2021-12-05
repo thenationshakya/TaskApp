@@ -1,14 +1,19 @@
 import React from 'react';
-import {StyleSheet, Image, View} from 'react-native';
 
-import logoBase from '../assets/backblur.png';
-import logoImage from '../assets/logobase.png';
+//dependencies
+import {StyleSheet, Image, View} from 'react-native';
 
 const Logo: React.FC<any> = () => {
   return (
     <View style={styles.logoContainer}>
-      <Image source={logoBase} style={styles.logoBase} />
-      <Image source={logoImage} style={styles.logoImage} />
+      <Image
+        source={require('../assets/backblur.png')}
+        style={styles.logoBase}
+      />
+      <Image
+        source={require('../assets/logobase.png')}
+        style={styles.logoImage}
+      />
     </View>
   );
 };

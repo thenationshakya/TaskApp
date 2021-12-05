@@ -1,12 +1,14 @@
 import React from 'react';
 import styles from './styles';
 
+//dependencies
 import {View} from 'react-native';
 
-import BackButton from '../../components/BackButton';
+//components
 import Counter from '../../components/Counter';
 import NoteList from '../../components/NoteList';
 import PageTitle from '../../components/PageTitle';
+import BackButton from '../../components/BackButton';
 
 const Notes: React.FC = () => {
   return (

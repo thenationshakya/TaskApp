@@ -1,18 +1,17 @@
 import React from 'react';
+
+//dependencies
 import {StyleSheet, Text, View} from 'react-native';
 
-import LinearGradient from 'react-native-linear-gradient';
-
-interface Props{
-}
+interface Props {}
 
 const Counter: React.FC<Props> = () => {
   return (
-   <>
-   <View>
-    <Text>0</Text>
-   </View>
-   </>
+    <>
+      <View>
+        <Text>0</Text>
+      </View>
+    </>
   );
 };
 const styles = StyleSheet.create({

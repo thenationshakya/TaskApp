@@ -1,6 +1,9 @@
 import React from 'react';
-import {StyleSheet, TouchableOpacity, Text, View, FlatList} from 'react-native';
+
+//dependencies
 import uuid from 'react-native-uuid';
+import {TouchableOpacity, Text, View, FlatList} from 'react-native';
+
 interface Props {
   id: number;
   note: string;

@@ -1,6 +1,8 @@
 import React from 'react';
-import {View, Text} from 'react-native';
 import styles from './styles';
+
+//dependencies
+import {View, Text} from 'react-native';
 
 const CheckList: React.FC = () => {
   return (

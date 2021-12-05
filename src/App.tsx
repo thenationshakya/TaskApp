@@ -1,11 +1,13 @@
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack';
-
 import React from 'react';
 
+//screens
+import NoteScreen from './screens/Notes';
 import CheckList from './screens/CheckList';
 import HomeScreen from './screens/HomeScreen';
-import NoteScreen from './screens/Notes';
+
+//dependencies
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
