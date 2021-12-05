@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles';
+import {Props} from './types';
 
 //dependencies
 import {View, Text} from 'react-native';
@@ -9,7 +10,7 @@ import LinearGradient from 'react-native-linear-gradient';
 import Logo from '../../components/Logo';
 import Button from '../../components/Button';
 
-const HomeScreen: React.FC<any> = ({navigation}) => {
+const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
     <LinearGradient style={styles.home} colors={['#4C2566', '#220B43']}>
       <View style={styles.logo}>

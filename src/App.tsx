@@ -11,6 +11,12 @@ import {createNativeStackNavigator} from '@react-navigation/native-stack';
 
 const Stack = createNativeStackNavigator();
 
+export type RootStackParamList = {
+  Home: undefined;
+  Notes: undefined;
+  CheckList: undefined;
+};
+
 const App = () => {
   return (
     <NavigationContainer>
