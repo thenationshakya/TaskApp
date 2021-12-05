@@ -18,7 +18,7 @@ export default StyleSheet.create({
   title: {
     fontFamily: 'Tangerine-Regular',
     fontSize: 60,
-    color: 'white',
+    color: '#fff',
   },
   description: {
     textAlign: 'center',

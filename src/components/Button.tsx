@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
   btnText: {
     textAlign: 'center',
     width: 200,
-    color: 'white',
+    color: '#fff',
     alignItems: 'center',
   },
 });

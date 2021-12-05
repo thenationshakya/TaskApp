@@ -12,7 +12,7 @@ const Notes: React.FC<Props> = ({title}) => {
 };
 const styles = StyleSheet.create({
   title: {
-    color: 'white',
+    color: '#fff',
     fontSize: 25,
   },
 });

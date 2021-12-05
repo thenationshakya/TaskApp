@@ -10,10 +10,7 @@ const Logo: React.FC<any> = () => {
         source={require('../assets/backblur.png')}
         style={styles.logoBase}
       />
-      <Image
-        source={require('../assets/logobase.png')}
-        style={styles.logoImage}
-      />
+      <Image source={require('../assets/logobase.png')} />
     </View>
   );
 };
