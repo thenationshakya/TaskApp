@@ -3,17 +3,17 @@ import React from 'react';
 //dependencies
 import {Text, StyleSheet} from 'react-native';
 
-interface Props {
+type Props = {
   title: string;
-}
+};
 
-const Notes: React.FC<Props> = ({title}) => {
+const PageTitle: React.FC<Props> = ({title}) => {
   return <Text style={styles.title}>{title}</Text>;
 };
 const styles = StyleSheet.create({
   title: {
-    color: '#fff',
-    fontSize: 25,
+    color: '#B471DA',
+    fontSize: 22,
   },
 });
-export default Notes;
+export default PageTitle;
