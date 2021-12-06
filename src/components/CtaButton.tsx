@@ -1,8 +1,8 @@
 import React from 'react';
-
-//dependencies
-import LinearGradient from 'react-native-linear-gradient';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
+
+//pacakages
+import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
 type ButtonProps = {

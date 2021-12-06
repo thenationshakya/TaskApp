@@ -1,6 +1,4 @@
 import React from 'react';
-
-//dependencies
 import {Text, StyleSheet} from 'react-native';
 
 type Props = {

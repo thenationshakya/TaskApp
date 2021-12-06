@@ -1,8 +1,8 @@
 import React from 'react';
-
-//dependencies
-import {useNavigation} from '@react-navigation/native';
 import {TouchableOpacity, Text, StyleSheet} from 'react-native';
+
+//packages
+import {useNavigation} from '@react-navigation/native';
 import LinearGradient from 'react-native-linear-gradient';
 
 interface Props {

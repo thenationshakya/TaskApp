@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
-
-//dependencies
-import LinearGradient from 'react-native-linear-gradient';
 import {StyleSheet, TouchableOpacity} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
+
+//packages
 import NoteModal from './NoteModal';
+import LinearGradient from 'react-native-linear-gradient';
+import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
 const AddIcon: React.FC = () => {
   const [modalVisible, setModalVisible] = useState(false);

@@ -1,19 +1,10 @@
 import React, {useState} from 'react';
+import {StyleSheet, Text, TextInput, View} from 'react-native';
 
-//dependencies
-import LinearGradient from 'react-native-linear-gradient';
-import {
-  Dimensions,
-  Modal,
-  StyleSheet,
-  Text,
-  TextInput,
-  TouchableOpacity,
-  View,
-} from 'react-native';
-import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
-import CtaButton from './CtaButton';
+//components
 import SaveButton from './SaveButton';
+
+//global
 import themeStyle from '../global/theme.style';
 
 type modalStates = {

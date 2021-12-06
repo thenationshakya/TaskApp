@@ -1,7 +1,5 @@
 import React from 'react';
 import styles from './styles';
-
-//dependencies
 import {View} from 'react-native';
 
 //components
@@ -10,7 +8,6 @@ import Counter from '../../components/Counter';
 import NoteList from '../../components/NoteList';
 import PageTitle from '../../components/PageTitle';
 import BackButton from '../../components/BackButton';
-import NoteModal from '../../components/NoteModal';
 
 const Notes: React.FC = () => {
   return (

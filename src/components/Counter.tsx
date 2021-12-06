@@ -1,9 +1,8 @@
 import React from 'react';
-
-//dependencies
 import {StyleSheet, Text, View} from 'react-native';
+
+//pacakages
 import LinearGradient from 'react-native-linear-gradient';
-import theme from '../global/theme.style';
 
 type Props = {
   count: number;

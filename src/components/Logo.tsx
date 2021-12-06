@@ -1,6 +1,4 @@
 import React from 'react';
-
-//dependencies
 import {StyleSheet, Image, View} from 'react-native';
 
 const Logo: React.FC<any> = () => {

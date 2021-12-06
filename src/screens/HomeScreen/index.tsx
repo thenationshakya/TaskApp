@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './styles';
 import {Props} from './types';
-
-//dependencies
 import {View, Text} from 'react-native';
+
+//packages
 import LinearGradient from 'react-native-linear-gradient';
 
 //components

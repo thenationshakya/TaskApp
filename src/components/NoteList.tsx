@@ -1,8 +1,8 @@
 import React from 'react';
 import {TouchableOpacity, Text, View, FlatList, StyleSheet} from 'react-native';
-import LinearGradient from 'react-native-linear-gradient';
 
 //packages
+import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome5 from 'react-native-vector-icons/AntDesign';
 
 type Props = {
