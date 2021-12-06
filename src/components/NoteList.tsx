@@ -45,12 +45,15 @@ const NoteList: React.FC<Props> = () => {
               start={{x: 0, y: 0}}
               end={{x: 1, y: 0}}
               style={styles.container}>
-              <Text numberOfLines={3} ellipsizeMode="tail">
+              <Text
+                style={styles.noteExcerpt}
+                numberOfLines={3}
+                ellipsizeMode="tail">
                 {item.note}
               </Text>
               <View style={styles.ctaBtns}>
                 <TouchableOpacity style={styles.more}>
-                  <Text>more..</Text>
+                  <Text style={styles.btnText}>more..</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.close}>
                   <FontAwesome5 name={'close'} style={styles.closeIcon} />
@@ -95,6 +98,13 @@ const styles = StyleSheet.create({
   },
   closeIcon: {
     color: 'red',
+  },
+  noteExcerpt: {
+    color: 'black',
+  },
+  btnText: {
+    color: 'black',
+    fontSize: 14,
   },
 });
 

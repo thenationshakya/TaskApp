@@ -5,7 +5,12 @@ import LinearGradient from 'react-native-linear-gradient';
 import {StyleSheet, TouchableOpacity, Text} from 'react-native';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 
-const Button: React.FC<any> = ({title, onPress}) => {
+type ButtonProps = {
+  title: string;
+  onPress: () => void;
+};
+
+const CtaButton: React.FC<ButtonProps> = ({title, onPress}) => {
   return (
     <TouchableOpacity onPress={onPress}>
       <LinearGradient
@@ -34,4 +39,4 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-export default Button;
+export default CtaButton;

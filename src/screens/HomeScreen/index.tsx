@@ -8,7 +8,7 @@ import LinearGradient from 'react-native-linear-gradient';
 
 //components
 import Logo from '../../components/Logo';
-import Button from '../../components/Button';
+import CtaButton from '../../components/CtaButton';
 
 const HomeScreen: React.FC<Props> = ({navigation}) => {
   return (
@@ -21,11 +21,11 @@ const HomeScreen: React.FC<Props> = ({navigation}) => {
         <Text style={styles.description}>
           Add quick notes and check lists for maximum productivity
         </Text>
-        <Button
+        <CtaButton
           title="Quick Notes"
           onPress={() => navigation.navigate('Notes')}
         />
-        <Button
+        <CtaButton
           title="Check List"
           onPress={() => navigation.navigate('CheckList')}
         />
