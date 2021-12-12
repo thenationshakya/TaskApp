@@ -1,5 +1,13 @@
 import React, {useState} from 'react';
-import {StyleSheet, Text, TextInput, View} from 'react-native';
+import {
+  Modal,
+  StyleSheet,
+  Text,
+  TextInput,
+  TouchableOpacity,
+  TouchableWithoutFeedback,
+  View,
+} from 'react-native';
 
 //components
 import SaveButton from './SaveButton';
@@ -9,37 +17,54 @@ import themeStyle from '../global/theme.style';
 
 type modalStates = {
   modalVisible: boolean;
+  setModal: any;
 };
 
-const NoteModal: React.FC<modalStates> = ({modalVisible}) => {
+const NoteModal: React.FC<modalStates> = ({modalVisible, setModal}) => {
   const [text, onChangeText] = useState('');
 
-  if (!modalVisible) {
-    return null;
-  }
   return (
     <>
-      <View style={styles.centeredView}>
-        <View style={styles.modalView}>
-          <Text style={styles.title}>New Note</Text>
-          <TextInput
-            value={text}
-            onChangeText={onChangeText}
-            placeholder={'Type Here...'}
-          />
-          <SaveButton
-            title={'Save Note'}
-            onPress={() => {
-              console.log('hello');
-            }}
-          />
-        </View>
-      </View>
+      <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModal(!modalVisible);
+        }}>
+        <TouchableOpacity
+          style={styles.container}
+          activeOpacity={1}
+          onPressOut={() => {
+            setModal(false);
+          }}>
+          <TouchableWithoutFeedback>
+            <View style={styles.centeredView}>
+              <View style={styles.modalView}>
+                <Text style={styles.title}>New Note</Text>
+                <TextInput
+                  value={text}
+                  onChangeText={onChangeText}
+                  placeholder={'Type Here...'}
+                  multiline={true}
+                />
+                <SaveButton
+                  title={'Save Note'}
+                  onPress={() => {
+                    console.log('hello');
+                  }}
+                />
+              </View>
+            </View>
+          </TouchableWithoutFeedback>
+        </TouchableOpacity>
+      </Modal>
     </>
   );
 };
 
 const styles = StyleSheet.create({
+  container: {flex: 1},
   centeredView: {
     position: 'absolute',
     top: 0,

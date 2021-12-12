@@ -2,12 +2,14 @@ import React, {useState} from 'react';
 import {StyleSheet, TouchableOpacity} from 'react-native';
 
 //packages
-import NoteModal from './NoteModal';
 import LinearGradient from 'react-native-linear-gradient';
 import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 
-const AddIcon: React.FC = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+interface Props {
+  onPress: () => void;
+}
+
+const AddIcon: React.FC<Props> = ({onPress}) => {
   return (
     <>
       <LinearGradient
@@ -15,14 +17,10 @@ const AddIcon: React.FC = () => {
         start={{x: 0, y: 0}}
         end={{x: 1, y: 0}}
         style={styles.container}>
-        <TouchableOpacity
-          onPress={() => {
-            setModalVisible(!modalVisible);
-          }}>
+        <TouchableOpacity onPress={onPress}>
           <MaterialIcons name={'post-add'} style={styles.iconStyle} />
         </TouchableOpacity>
       </LinearGradient>
-      <NoteModal modalVisible={modalVisible} />
     </>
   );
 };

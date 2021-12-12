@@ -25,6 +25,8 @@ const DATA = [
   },
 ];
 
+export const noteCount = DATA.length;
+
 const NoteList: React.FC<Props> = () => {
   return (
     <>

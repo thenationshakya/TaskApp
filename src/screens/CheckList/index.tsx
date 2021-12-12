@@ -6,6 +6,8 @@ import PageTitle from '../../components/PageTitle';
 import Counter from '../../components/Counter';
 import CheckListTabs from '../../components/CheckListTabs';
 
+import {counterNum} from '../../components/CheckListTabs';
+
 const CheckList: React.FC = () => {
   const [text, onChangeText] = useState('');
   return (
@@ -14,7 +16,7 @@ const CheckList: React.FC = () => {
       <View style={styles.innerContainer}>
         <View style={styles.title}>
           <PageTitle title={'Check Lists'} />
-          <Counter count={0} />
+          <Counter count={counterNum} />
         </View>
         <View style={styles.textInput}>
           <TextInput

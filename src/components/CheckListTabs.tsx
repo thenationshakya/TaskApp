@@ -5,9 +5,12 @@ import {Text, StyleSheet, View, FlatList} from 'react-native';
 import {createMaterialTopTabNavigator} from '@react-navigation/material-top-tabs';
 import CheckBox from '@react-native-community/checkbox';
 import themeStyle from '../global/theme.style';
+import {NumberLiteralTypeAnnotation} from '@babel/types';
 const Tab = createMaterialTopTabNavigator();
 
-interface Props {}
+interface Props {
+  position: NumberLiteralTypeAnnotation;
+}
 
 const CHECK_DATA = [
   {
@@ -27,7 +30,9 @@ const CHECK_DATA = [
 // const COMPLETED_DATA = [];
 // const RUNNING_DATA = [];
 
-function AllSection() {
+export const counterNum = CHECK_DATA.length;
+
+const AllSection: React.FC<Props> = () => {
   const [isSelected, setSelection] = useState(
     new Array(CHECK_DATA.length).fill(false),
   );
@@ -58,7 +63,7 @@ function AllSection() {
       />
     </View>
   );
-}
+};
 
 function CompletedSection() {
   return (
@@ -76,7 +81,7 @@ function RunningSection() {
   );
 }
 
-const CheckListTabs: React.FC<Props> = () => {
+const CheckListTabs: React.FC = () => {
   return (
     <>
       <Tab.Navigator>
