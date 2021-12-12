@@ -1,14 +1,10 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {TouchableOpacity, Text, View, FlatList, StyleSheet} from 'react-native';
 
 //packages
 import LinearGradient from 'react-native-linear-gradient';
 import FontAwesome5 from 'react-native-vector-icons/AntDesign';
-
-type Props = {
-  id: number;
-  note?: string;
-};
+import ViewModal from './ViewModal';
 
 const DATA = [
   {
@@ -27,9 +23,22 @@ const DATA = [
 
 export const noteCount = DATA.length;
 
-const NoteList: React.FC<Props> = () => {
+const NoteList: React.FC = () => {
+  const [viewModalVisible, setViewModalVisible] = useState<boolean>(false);
+  const [modalData, setModalData] = useState('');
+
+  function handleModal(data: string) {
+    setModalData(data);
+    setViewModalVisible(true);
+  }
+
   return (
     <>
+      <ViewModal
+        modalVisible={viewModalVisible}
+        setModal={setViewModalVisible}
+        data={modalData}
+      />
       <FlatList
         data={DATA}
         renderItem={({item}) => {
@@ -54,7 +63,9 @@ const NoteList: React.FC<Props> = () => {
                 {item.note}
               </Text>
               <View style={styles.ctaBtns}>
-                <TouchableOpacity style={styles.more}>
+                <TouchableOpacity
+                  style={styles.more}
+                  onPress={() => handleModal(item.note)}>
                   <Text style={styles.btnText}>more..</Text>
                 </TouchableOpacity>
                 <TouchableOpacity style={styles.close}>

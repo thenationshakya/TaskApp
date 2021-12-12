@@ -24,7 +24,7 @@ const Notes: React.FC = () => {
         <PageTitle title={'Quick Notes'} />
         <Counter count={noteCount} />
       </View>
-      <NoteList id={0} note={''} />
+      <NoteList />
       <AddIcon
         onPress={() => {
           setModalVisible(!modalVisible);
