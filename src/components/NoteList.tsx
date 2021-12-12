@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useEffect, useState} from 'react';
 import {TouchableOpacity, Text, View, FlatList, StyleSheet} from 'react-native';
 
 //packages
@@ -21,16 +21,31 @@ const DATA = [
   },
 ];
 
-export const noteCount = DATA.length;
+interface Props {
+  setCount: (cnt: number) => void;
+}
 
-const NoteList: React.FC = () => {
+const NoteList: React.FC<Props> = ({setCount}) => {
   const [viewModalVisible, setViewModalVisible] = useState<boolean>(false);
   const [modalData, setModalData] = useState('');
+  const [noteData, setNoteData] = useState(DATA);
+
+  useEffect(() => {
+    setCount(noteData.length);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   function handleModal(data: string) {
     setModalData(data);
     setViewModalVisible(true);
   }
+
+  const handleClose = (key: number) => {
+    var newNoteData = [...noteData];
+    newNoteData.splice(key, 1);
+    setNoteData(newNoteData);
+    setCount(newNoteData.length);
+  };
 
   return (
     <>
@@ -40,8 +55,9 @@ const NoteList: React.FC = () => {
         data={modalData}
       />
       <FlatList
-        data={DATA}
-        renderItem={({item}) => {
+        data={noteData}
+        key={noteData.length}
+        renderItem={({item, index}) => {
           var itemKey = item.key;
           var gradientColors;
 
@@ -68,7 +84,9 @@ const NoteList: React.FC = () => {
                   onPress={() => handleModal(item.note)}>
                   <Text style={styles.btnText}>more..</Text>
                 </TouchableOpacity>
-                <TouchableOpacity style={styles.close}>
+                <TouchableOpacity
+                  style={styles.close}
+                  onPress={() => handleClose(index)}>
                   <FontAwesome5 name={'close'} style={styles.closeIcon} />
                 </TouchableOpacity>
               </View>

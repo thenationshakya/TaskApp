@@ -11,11 +11,10 @@ import BackButton from '../../components/BackButton';
 import NoteModal from '../../components/NoteModal';
 
 //count
-import {noteCount} from '../../components/NoteList';
 
 const Notes: React.FC = () => {
   const [modalVisible, setModalVisible] = useState(false);
-
+  const [noteCount, setNoteCount] = useState(0);
   return (
     <View style={styles.home}>
       <NoteModal modalVisible={modalVisible} setModal={setModalVisible} />
@@ -24,7 +23,7 @@ const Notes: React.FC = () => {
         <PageTitle title={'Quick Notes'} />
         <Counter count={noteCount} />
       </View>
-      <NoteList />
+      <NoteList setCount={cnt => setNoteCount(cnt)} />
       <AddIcon
         onPress={() => {
           setModalVisible(!modalVisible);
